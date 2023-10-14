@@ -1,7 +1,7 @@
 // https://leetcode.cn/problems/two-sum/description/?envType=study-plan-v2&envId=top-100-liked
 
 
-// 方法1：暴力枚举  ---  时间复杂度：o(n^2)
+// 方法1：暴力枚举 --- 时间复杂度：o(n^2)
 let towSum1 = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
