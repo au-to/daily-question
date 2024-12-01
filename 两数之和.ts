@@ -2,7 +2,7 @@
 
 
 // 方法1：暴力枚举 --- 时间复杂度：o(n^2)
-let towSum1 = function (nums, target) {
+let towSum1 = function (nums: number[], target: number) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
       let sum = nums[i] + nums[j];
@@ -15,7 +15,7 @@ let towSum1 = function (nums, target) {
 
 
 // 方法2：哈希表 --- 时间复杂度：o(n)
-let towSum2 = function (nums, target) {
+let towSum2 = function (nums: number[], target: number) {
   let map = new Map()
   for (let i = 0; i < nums.length; i++) {
     let temp = target - nums[i];
