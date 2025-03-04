@@ -11,6 +11,13 @@ class ListNode {
   }
 }
 
+/**
+ * 时间复杂度：O(nlogn)
+ * 空间复杂度：O(logn)
+ * 对链表进行排序
+ * @param head 链表的头节点
+ * @returns 排序后的链表头节点
+ */
 function sortList(head: ListNode | null): ListNode | null {
   if (head === null || head.next === null) return head // 递归终止条件
 
