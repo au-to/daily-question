@@ -47,35 +47,32 @@ class BinaryTree<T> {
   }
 
   // 前序遍历
-  preOrder(node: TreeNode<T> | null = this.root): T[] {
-    const result: T[] = []
+  preOrder(node: TreeNode<T> | null = this.root, result: T[]): T[] {
     if (node) {
       result.push(node.value)
-      this.preOrder(node.left)
-      this.preOrder(node.right)
+      this.preOrder(node.left, result)
+      this.preOrder(node.right, result)
     }
 
     return result
   }
 
   // 中序遍历
-  inOrder(node: TreeNode<T> | null = this.root): T[] {
-    const result: T[] = []
+  inOrder(node: TreeNode<T> | null = this.root, result: T[]): T[] {
     if (node) {
-      this.inOrder(node.left)
+      this.inOrder(node.left, result)
       result.push(node.value)
-      this.inOrder(node.right)
+      this.inOrder(node.right, result)
     }
 
     return result
   }
 
   // 后序遍历
-  postOrder(node: TreeNode<T> | null = this.root): T[] {
-    const result: T[] = []
+  postOrder(node: TreeNode<T> | null = this.root, result: T[]): T[] {
     if (node) {
-      this.postOrder(node.left)
-      this.postOrder(node.right)
+      this.postOrder(node.left, result)
+      this.postOrder(node.right, result)
       result.push(node.value)
     }
 
